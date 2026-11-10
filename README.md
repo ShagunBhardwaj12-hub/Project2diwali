@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/f3f5573f-dee8-4750-aecc-8a363463792f
+
 🪔 Happy Diwali – Interactive Greetings & Celebration Web App 🎆
 
 An interactive and visually engaging web application created to celebrate the festival of lights! This project brings the festive spirit to life with animated Diyas, personalized Diwali wishes, and colorful fireworks.
