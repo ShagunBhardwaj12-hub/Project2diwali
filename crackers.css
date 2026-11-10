@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #4b1010,
+            #180303,
+            #050008
+        );
+
+    font-family: Georgia, serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.celebration {
+    text-align: center;
+    z-index: 2;
+    padding: 25px;
+}
+
+h1 {
+    color: #ffdb77;
+    font-size: clamp(35px, 7vw, 65px);
+
+    text-shadow: 0 0 20px orange;
+
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #ffd66b;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #ffe7bd;
+    margin: 20px 0;
+    line-height: 1.7;
+}
+
+#crackerBtn {
+    padding: 17px 30px;
+
+    border: 2px solid #ffdb77;
+    border-radius: 40px;
+
+    background: linear-gradient(
+        135deg,
+        #ffb52e,
+        #ff5c00
+    );
+
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 20px orange;
+
+    transition: 0.3s;
+}
+
+#crackerBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px gold;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: #ffdb77;
+    text-decoration: none;
+}
+
+.fireworks-container {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.spark {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    animation: explode 1.3s ease-out forwards;
+}
+
+@keyframes explode {
+
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(var(--x), var(--y))
+            scale(0);
+
+        opacity: 0;
+    }
+
+}
+
+#crackerMessage {
+    color: #ffdb77;
+    font-size: 18px;
+}
+
+@media (max-width: 480px) {
+    .celebration {
+        padding: 15px;
+    }
+}

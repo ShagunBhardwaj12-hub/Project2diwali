@@ -1,0 +1,476 @@
+
+/* =====================================
+   1. BASIC RESET
+===================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #240606,
+        #4a0d0d,
+        #210505
+    );
+
+    color: #fff4d6;
+    font-family: Georgia, serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+    padding: 30px 15px;
+}
+
+
+/* =====================================
+   2. MAIN CONTAINER
+===================================== */
+.container {
+    width: 100%;
+    max-width: 700px;
+
+    text-align: center;
+
+    padding: 45px 25px;
+
+    border: 1px solid #c99a3b;
+    border-radius: 20px;
+
+    background: rgba(40, 5, 5, 0.85);
+
+    box-shadow: 0 0 40px rgba(255, 174, 0, 0.15);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================
+   3. TOP TEXT
+===================================== */
+
+.top-text {
+    color: #f5c75e;
+    letter-spacing: 5px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+
+/* =====================================
+   4. MAIN HEADING
+===================================== */
+
+h1 {
+    font-size: clamp(40px, 9vw, 70px);
+
+    color: #ffdb77;
+
+    text-shadow: 0 0 15px #ff9d00;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #f7c96c;
+    font-size: 26px;
+    margin-bottom: 35px;
+}
+
+/* =====================================
+   5. DECORATIVE DIYAS
+===================================== */
+.diyas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+
+    margin: 45px 0;
+}
+
+.diya {
+    position: relative;
+    width: 75px;
+    height: 65px;
+}
+
+.bowl {
+    position: absolute;
+    bottom: 5px;
+
+    width: 75px;
+    height: 35px;
+
+    background: linear-gradient(
+        #ffcf5c,
+        #a94b09
+    );
+
+    border-radius: 10px 10px 45px 45px;
+
+    box-shadow: 0 0 20px #ff9d00;
+}
+
+.diya-base {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+
+    width: 55px;
+    height: 8px;
+
+    background: #d78b26;
+    border-radius: 50%;
+}
+
+.flame {
+    position: absolute;
+    top: -27px;
+    left: 29px;
+
+    width: 18px;
+    height: 28px;
+
+    background: linear-gradient(
+        #fff7a0,
+        #ffb000,
+        #ff4d00
+    );
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 20px #ffae00;
+
+    animation: flicker 0.7s infinite alternate;
+
+    transform-origin: bottom;
+
+    z-index: 2;
+}
+
+
+/* =====================================
+   6. FLAME ANIMATION
+===================================== */
+
+@keyframes flicker {
+
+    from {
+        transform: scale(1) rotate(-5deg);
+    }
+
+    to {
+        transform: scale(1.15) rotate(5deg);
+    }
+
+}
+
+
+/* =====================================
+   7. INTRO TEXT
+===================================== */
+
+.intro {
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #f5d9a0;
+
+    margin: 25px 0;
+}
+
+
+/* =====================================
+   8. BUTTONS
+===================================== */
+
+button {
+    padding: 15px 28px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd66b,
+        #d68a17
+    );
+
+    color: #421000;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 25px #ffb52e;
+}
+
+button:disabled {
+    opacity: 0.7;
+    cursor: default;
+}
+
+
+/* =====================================
+   9. GREETING MESSAGE
+===================================== */
+
+.message {
+    margin-top: 35px;
+
+    padding: 25px 15px;
+
+    border-top: 1px solid #bd8b34;
+    border-bottom: 1px solid #bd8b34;
+
+    animation: appear 1s ease;
+}
+
+.message h2 {
+    color: #ffdc82;
+    margin: 15px 0;
+}
+
+.message p {
+    color: #ffe7bd;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin: 15px 0;
+}
+
+.message h3 {
+    color: #f8c85c;
+    margin-top: 20px;
+}
+
+.gold {
+    text-shadow: 0 0 15px #ffae00;
+}
+
+.divider {
+    color: #e9b94d;
+    letter-spacing: 10px;
+    margin: 15px;
+}
+
+
+/* =====================================
+   10. HIDDEN MESSAGE
+===================================== */
+
+.hidden {
+    display: none;
+}
+
+
+/* =====================================
+   11. MESSAGE ANIMATION
+===================================== */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================
+   12. DIYA COUNTER SECTION
+===================================== */
+
+.diya-section {
+    margin-top: 30px;
+}
+
+.share-btn {
+    display: block;
+
+    margin: 25px auto 0;
+
+    background: transparent;
+
+    border: 1px solid #e9b94d;
+
+    color: #ffdb77;
+}
+
+#diyacount {
+    color: #f5d9a0;
+
+    margin-top: 18px;
+
+    font-size: 18px;
+}
+
+#extradiyas {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    margin-top: 15px;
+    gap: 10px;
+}
+
+.extra-diya {
+    display: inline-block;
+
+    font-size: 32px;
+
+    margin: 12px;
+
+    animation: appear 0.6s ease;
+
+    filter: drop-shadow(0 0 10px orange);
+}
+
+
+/* =====================================
+   13. FOOTER
+===================================== */
+
+footer {
+    margin-top: 40px;
+
+    color: #d5ad6a;
+
+    font-size: 13px;
+
+    line-height: 2;
+}
+
+
+/* =====================================
+   14. FLOATING GOLDEN LIGHTS
+===================================== */
+
+.light {
+    position: fixed;
+
+    width: 6px;
+    height: 6px;
+
+    background: #ffd76c;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 15px #ffae00;
+
+    pointer-events: none;
+
+    animation: floatUp linear infinite;
+
+    z-index: 1;
+}
+
+@keyframes floatUp {
+
+    from {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================
+   15. MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        padding: 35px 15px;
+    }
+
+    .diyas {
+        gap: 18px;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .message p {
+        font-size: 15px;
+    }
+
+    .top-text {
+        letter-spacing: 3px;
+    }
+
+}
+.cracker-section {
+    margin-top: 35px;
+    padding: 20px;
+}
+
+.cracker-section h2 {
+    color: #ffdb77;
+    margin-bottom: 12px;
+}
+
+.cracker-section p {
+    color: #f5d9a0;
+    margin-bottom: 20px;
+}
+
+.cracker-link {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #ffd66b,
+        #d68a17
+    );
+
+    color: #421000;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.cracker-link:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 25px orange;
+}
