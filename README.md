@@ -22,13 +22,9 @@ An interactive and visually engaging web application created to celebrate the fe
 
 🚀 Getting Started
 
-Follow these steps to run the project locally:
-
-1. Clone the repository:
-   git clone  https://github.com/ShagunBhardwaj12-hub/diwali-project.git
-2. Open the project folder.
-3. Open "index.html" in your browser.
-4. Enjoy the Diwali celebration!
+The link is live : 
+                   https://shagunbhardwaj12-hub.github.io/Project2diwali/diwali.html
+                   Enjoy the Diwali celebration!
 
 📚 What I Learned
 
